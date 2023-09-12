@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- pattern CSS file -->
+    <link rel="stylesheet" href="./node_modules/pattern.css/dist/pattern.css">
+    <!-- style CSS file -->
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.svg">
+    <!-- JS file link -->
+    <script src="app.js" defer></script>
+    <title>Etch a Sketch</title>
+</head>
+
+<body class="pattern-cross-dots-lg">
+    <header class="header">
+        <h1 class="header__h1">Etch a Sketch</h1>
+    </header>
+    <main>
+        <section class="prefrence">
+            <article class="prefrence__color">
+                <div class="color__input">
+                    <input type="color" id="input-chose-color">
+                    <p class="input__text">Pick a Color</p>
+                </div>
+
+                <button class="color__choice-btn">
+                    <img src="./images/brush.svg" alt="brush icon">
+                    Color
+                </button>
+            </article>
+            <article class="prefrence__rainbow-mode">
+                <button class="rainbow-mode-btn">
+                    <img src="./images/pallete.svg" alt="pallet icon">
+                    Rainbow Mode
+                </button>
+            </article>
+            <article class="prefrence__erase">
+                <button class="eraser">
+                    <img src="./images/eraser.svg" alt="">
+                    Eraser
+                </button>
+                <button class="clear">
+                    <img src="./images/clear-all.svg" alt="">
+                    Clear
+                </button>
+            </article>
+
+            <article class="prefrence__grid-size">
+                <p class="range__value">4 × 4</p>
+                <input class="grid-size__input" value="4" type="range" min="3" max="64">
+            </article>
+        </section>
+        <section class="grid-container">
+        </section>
+    </main>
+</body>
+
+</html>

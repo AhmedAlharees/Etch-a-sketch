@@ -1,0 +1,95 @@
+@use '_reset';
+
+/* mixins */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* colors */
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #7fa961;
+}
+
+/* header style */
+.header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  margin: 1em 0;
+  &__h1 {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+    background-color: #7fa961;
+  }
+}
+
+main {
+  margin: 3em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5em;
+}
+
+/* prefrences */
+
+.prefrence {
+  background-color: #fff;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 20px;
+  & > * {
+    margin-top: 1rem;
+  }
+  .color__choice-btn,
+  .color__input,
+  .eraser,
+  .clear {
+    @include flex-center;
+    gap: 10px;
+  }
+  .color__choice-btn {
+    margin-top: 16px;
+  }
+
+  .clear {
+    margin-top: 16px;
+  }
+  &__rainbow-mode {
+    .rainbow-mode-btn {
+      @include flex-center;
+      gap: 10px;
+    }
+  }
+}
+
+.grid-container {
+  width: 330px;
+  height: 330px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  border: 1px solid black;
+  .grid {
+    border-left: 1px solid rgb(184, 184, 184);
+    border-top: 1px solid rgb(184, 184, 184);
+    background-color: #fff;
+  }
+}
+
+@media (min-width: 550px) {
+  main {
+    flex-direction: row;
+  }
+  .grid-container {
+    width: 500px;
+    height: 500px;
+  }
+}
